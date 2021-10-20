@@ -20,7 +20,7 @@ menu.addEventListener("click", toggleMenu, false);
 //   });
 // });
 
-const container = document.querySelector(".container-productos");
+const container = document.querySelector(".contenedor-productos");
 
 const productos = [
   {
@@ -29,8 +29,58 @@ const productos = [
       "https://plantamadrerosario.com/wp-content/uploads/2020-05-11-01.49.13-1_copy_2031x2515.jpg",
     nombreCientifico: "ficus elastica",
     lugar: "interior / exterior",
-    cantidadDeAgua: "poca",
+    cantidadDeAgua: "poca agua",
     crecimiento: "lento / arbol",
+    precio: "$2500",
+  },
+  {
+    nombreDelProducto: "gomero",
+    fotoDelProducto:
+      "https://images.unsplash.com/photo-1486162928267-e6274cb3106f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+    nombreCientifico: "ficus elastica",
+    lugar: "interior / exterior",
+    cantidadDeAgua: "poca agua",
+    crecimiento: "crecimiento lento",
+    precio: "$2500",
+  },
+  {
+    nombreDelProducto: "gomero",
+    fotoDelProducto:
+      "https://images.unsplash.com/photo-1486162928267-e6274cb3106f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+    nombreCientifico: "ficus elastica",
+    lugar: "interior / exterior",
+    cantidadDeAgua: "poca agua",
+    crecimiento: "crecimiento lento",
+    precio: "$2500",
+  },
+  {
+    nombreDelProducto: "gomero",
+    fotoDelProducto:
+      "https://plantamadrerosario.com/wp-content/uploads/2020-05-11-01.49.13-1_copy_2031x2515.jpg",
+    nombreCientifico: "ficus elastica",
+    lugar: "interior / exterior",
+    cantidadDeAgua: "poca agua",
+    crecimiento: "crecimiento lento",
+    precio: "$2500",
+  },
+  {
+    nombreDelProducto: "gomero",
+    fotoDelProducto:
+      "https://images.unsplash.com/photo-1486162928267-e6274cb3106f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+    nombreCientifico: "ficus elastica",
+    lugar: "interior / exterior",
+    cantidadDeAgua: "poca agua",
+    crecimiento: "crecimiento lento",
+    precio: "$2500",
+  },
+  {
+    nombreDelProducto: "gomero",
+    fotoDelProducto:
+      "https://images.unsplash.com/photo-1486162928267-e6274cb3106f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+    nombreCientifico: "ficus elastica",
+    lugar: "interior / exterior",
+    cantidadDeAgua: "poca agua",
+    crecimiento: "crecimiento lento",
     precio: "$2500",
   },
 ];
@@ -40,8 +90,11 @@ const crearProducto = (e) => {
   let flipCard = document.createElement("div");
   let cardFront = document.createElement("div");
   let cardFigure = document.createElement("figure");
+  let cardFigure2 = document.createElement("figure");
   let figureDiv = document.createElement("div");
   let figureImg = document.createElement("img");
+  let figureImg2 = document.createElement("img");
+  let figureImgFront = document.createElement("img");
   let figcaption = document.createElement("figcaption");
 
   let cardFrontUl = document.createElement("ul");
@@ -74,10 +127,15 @@ const crearProducto = (e) => {
   button.textContent = "Buy";
 
   flipCardContainer.classList.add("flip-card-container");
-  flipCardContainer.style.hue = "220";
+
+  cardFigure2.classList.add("figure");
+  figcaption.classList.add("figcaption");
+  cardFigure.classList.add("figure");
+  //   flipCardContainer.style.hue = "220";
   flipCard.classList.add("flip-card");
   cardFront.classList.add("card-front");
-  figureImg.classList.add("img-bg");
+  //   figureImg.classList.add("img-bg");
+  figureDiv.classList.add("img-bg");
   cardBack.classList.add("card-back");
   designContainer.classList.add("design-container");
   designContainerSpan1.classList.add("design");
@@ -97,15 +155,18 @@ const crearProducto = (e) => {
   designContainerSpan8.classList.add("design");
   designContainerSpan8.classList.add("design--8");
 
-  figureImg.src = e.fotoDelProducto;
-  figureImg.alt = `${e.nombreDelProducto}`;
+  //   figureImg.src = e.fotoDelProducto;
+  //   figureImg.alt = `${e.nombreDelProducto}`;
+  //   figureImgFront.src = e.fotoDelProducto;
+  //   figureImgFront.alt = `${e.nombreDelProducto}`;
 
   flipCardContainer.appendChild(flipCard);
   flipCard.appendChild(cardFront);
-  cardFront.appendChild(cardFigure);
-  cardFigure.appendChild(figureDiv);
-  cardFigure.appendChild(figureImg);
-  cardFigure.appendChild(figcaption);
+  cardFront.appendChild(cardFigure2);
+  //   cardFront.appendChild(figureImg);
+  cardFigure2.appendChild(figureDiv);
+  cardFigure2.appendChild(figureImg2);
+  cardFigure2.appendChild(figcaption);
   cardFront.appendChild(cardFrontUl);
   cardFrontUl.appendChild(liDetalle1);
   cardFrontUl.appendChild(liDetalle2);
@@ -115,6 +176,9 @@ const crearProducto = (e) => {
 
   flipCard.appendChild(cardBack);
   cardBack.appendChild(cardFigure);
+  cardFigure.appendChild(figureDiv);
+  cardFigure.appendChild(figureImg);
+  //   cardFigure2.appendChild(figcaption);
   cardBack.appendChild(button);
   cardBack.appendChild(designContainer);
   designContainer.appendChild(designContainerSpan1);
@@ -125,6 +189,13 @@ const crearProducto = (e) => {
   designContainer.appendChild(designContainerSpan6);
   designContainer.appendChild(designContainerSpan7);
   designContainer.appendChild(designContainerSpan8);
+
+  figureImg.src = e.fotoDelProducto;
+  figureImg.alt = `${e.nombreDelProducto}`;
+  figureImg2.src = e.fotoDelProducto;
+  figureImg2.alt = `${e.nombreDelProducto}`;
+
+  container.appendChild(flipCardContainer);
 };
 
 function agregarProductos() {

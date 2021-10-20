@@ -1,7 +1,6 @@
-/* @import url("https://fonts.googleapis.com/css?family=Lato"); */
+@import url("https://fonts.googleapis.com/css?family=Lato");
 
-/* default */
-*,
+default *,
 *::after,
 *::before {
   margin: 0;
@@ -31,21 +30,21 @@
   --grey: hsl(0, 0%, 50%); */
 
   /* width: 310px;
-    height: 500px;
-    margin: 40px; */
+  height: 500px;
+  margin: 40px; */
 
-  perspective: 1000px;
+  /* perspective: 1000px; */
   width: 100%;
   height: 200vh;
-  min-height: 100vh;
-  padding: 40px;
+  /* min-height: 100vh; */
+  /* padding: 40px; */
 
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 
-  background: hsl(220, 10%, 12%);
+  /* background: hsl(220, 10%, 12%); */
 }
 
 /* .flip-card-container */
@@ -113,12 +112,12 @@
 }
 
 /* figure */
-figure {
+.figure {
   z-index: -1;
 }
 
 /* figure, .img-bg */
-figure,
+.figure,
 .img-bg {
   position: absolute;
   top: 0;
@@ -132,10 +131,11 @@ figure,
 img {
   height: 100%;
   border-radius: 24px;
+  opacity: 0.6;
 }
 
 /* figcaption */
-figcaption {
+.figcaption {
   display: block;
 
   width: auto;
@@ -211,18 +211,22 @@ ul {
 
 /* li */
 li {
+  /* color: black; */
   width: 100%;
   margin-top: 12px;
   padding-bottom: 12px;
-
-  font-size: 14px;
+  font-weight: 500;
+  font-size: 1.2rem;
   text-align: center;
 
   position: relative;
 }
 
 li:nth-child(2n) {
+  /* color: black; */
   color: var(--white-2);
+  font-weight: 500;
+  font-size: 1.2rem;
 }
 
 li:not(:last-child)::after {
@@ -374,11 +378,11 @@ button:focus + .design-container {
   --op: 0.7;
 }
 
-.abs-site-link {
+/* .abs-site-link {
   position: fixed;
   bottom: 20px;
   left: 20px;
   color: hsla(0, 0%, 100%, 0.6);
   font-size: 16px;
   font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
-}
+} */

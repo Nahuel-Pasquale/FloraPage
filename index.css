@@ -60,6 +60,19 @@ html {
   align-items: center;
   color: black;
 }
+.carrito i {
+  font-size: 2rem;
+}
+.carrito {
+  width: 10%;
+  height: 15vh;
+  background-color: inherit;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
 .logIn i {
   font-size: 2rem;
 }
